@@ -11,7 +11,7 @@ startIpCameraBtn.addEventListener("click", async () => {
     }
 
     try {
-        const response = await fetch("/start_camera_ip", {
+const response = await fetch("https://sua-url-do-backend.com/start_camera_ip", { /* ... */ } );
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
