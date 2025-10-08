@@ -1,55 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detecção de Botão de Parada de Ônibus</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>🚌 Detecção de Botão de Parada de Ônibus</h1>
-        
-        <div class="video-container">
-            <video id="video" autoplay playsinline></video>
-            <canvas id="overlayCanvas"></canvas>
-            <canvas id="canvas" style="display: none;"></canvas>
-        </div>
-
-        <div class="controls">
-            <button id="startBtn">Iniciar Câmera</button>
-            <button id="stopBtn" disabled>Parar Câmera</button>
-            <button id="detectBtn" disabled>Iniciar Detecção</button>
-        </div>
-
-        <div class="status">
-            <div class="status-item">
-                <span class="status-label">Status da Câmera:</span>
-                <span class="status-value" id="cameraStatus">Desligada</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">Status da Detecção:</span>
-                <span class="status-value" id="detectionStatus">Inativa</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">Frames Processados:</span>
-                <span class="status-value" id="frameCount">0</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">Proximidade da Mão:</span>
-                <span class="status-value" id="proximityStatus">-</span>
-            </div>
-        </div>
-
-        <div class="alert" id="alert">
-            ⚠️ MÃO DETECTADA PRÓXIMA AO BOTÃO!
-        </div>
-
-        <div class="info">
-            <strong>ℹ️ Instruções:</strong> Clique em "Iniciar Câmera" para ativar a webcam. Depois, clique em "Iniciar Detecção" para começar a monitorar a aproximação de mãos ao botão de parada. Uma caixa azul aparecerá ao redor do botão detectado, e um texto colorido indicará a proximidade da mão.
-        </div>
-    </div>
-
-    <script src="app.js"></script>
-</body>
-</html>
+<div class="ip-camera-input">
+    <label for="ipCameraUrl">URL da Câmera IP:</label>
+    <input type="text" id="ipCameraUrl" placeholder="Ex: http://192.168.1.100:8080/video" size="50">
+</div>
+...
+<div class="controls">
+    <button id="startIpCameraBtn">Iniciar Câmera IP</button>
+    <button id="stopIpCameraBtn" disabled>Parar Câmera IP</button>
+    <!-- ... outros botões ... -->
+</div>
